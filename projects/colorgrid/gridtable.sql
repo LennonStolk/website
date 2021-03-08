@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `gridtable`
+-- Tabelstructuur voor tabel `color-grid-table`
 --
 
-CREATE TABLE `gridtable` (
+CREATE TABLE `color-grid-table` (
   `id` int(5) NOT NULL,
   `positie_x` int(5) NOT NULL,
   `positie_y` int(5) NOT NULL,
@@ -35,10 +35,10 @@ CREATE TABLE `gridtable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Gegevens worden geëxporteerd voor tabel `gridtable`
+-- Gegevens worden geëxporteerd voor tabel `color-grid-table`
 --
 
-INSERT INTO `gridtable` (`id`, `positie_x`, `positie_y`, `kleur`) VALUES
+INSERT INTO `color-grid-table` (`id`, `positie_x`, `positie_y`, `kleur`) VALUES
 (0, 0, 0, 'rgb(128, 255, 255)'),
 (1, 1, 0, 'rgb(119, 219, 237)'),
 (2, 2, 0, 'rgb(110, 182, 219)'),
@@ -109,9 +109,9 @@ INSERT INTO `gridtable` (`id`, `positie_x`, `positie_y`, `kleur`) VALUES
 --
 
 --
--- Indexen voor tabel `gridtable`
+-- Indexen voor tabel `color-grid-table`
 --
-ALTER TABLE `gridtable`
+ALTER TABLE `color-grid-table`
   ADD PRIMARY KEY (`id`);
 COMMIT;
 
