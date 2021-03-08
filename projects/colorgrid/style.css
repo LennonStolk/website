@@ -1,0 +1,32 @@
+#gridContainer {
+    display: flex;
+    width: 480px;
+    height: 480px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#controlsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    margin-top: -150px;
+}
+
+#controlsContainer > input[type="color"] {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    padding: 0;
+}
+
+#gridButton {
+    height: 50px;
+    width: 100px;
+}
+
+.block {
+    display: block;
+    width: 60px;
+    height: 60px;
+}

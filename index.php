@@ -13,8 +13,20 @@
     <div class="projectsFlexbox">
         <div class="projectBlock">
             <img src="img/project_thumbnails/among-us-memory.png" alt="Plaatje niet aanwezig" height="200px">
-            <a href="among-us-memory">
+            <a href="projects/among-us-memory">
                 <div class="projectTitle">Among Us Memory</div>
+            </a>
+        </div>
+        <div class="projectBlock">
+            <img src="img/project_thumbnails/colorgrid.png" alt="Plaatje niet aanwezig" height="200px">
+            <a href="projects/colorgrid">
+                <div class="projectTitle">Colorgrid</div>
+            </a>
+        </div>
+        <div class="projectBlock">
+            <img src="img/project_thumbnails/galgje.png" alt="Plaatje niet aanwezig" height="200px">
+            <a href="projects/galgje">
+                <div class="projectTitle">Galgje</div>
             </a>
         </div>
     </div>
