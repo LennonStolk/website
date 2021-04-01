@@ -29,6 +29,12 @@
                 <div class="projectTitle">Galgje</div>
             </a>
         </div>
+        <div class="projectBlock">
+            <img src="img/project_thumbnails/loz.png" alt="Plaatje niet aanwezig" height="200px">
+            <a href="projects/LOZ">
+                <div class="projectTitle">LOZ</div>
+            </a>
+        </div>
     </div>
 </body>
 </html>
