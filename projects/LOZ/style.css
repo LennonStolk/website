@@ -14,8 +14,19 @@ body {
     margin: 0 auto;
 }
 
-
 #frames {
     margin-left: 50px;
     font-size: 50px;
+}
+
+.tilePanel {
+    width: 200px;
+    height: 800px;
+    background: rgb(214, 214, 214);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
 }
