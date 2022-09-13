@@ -1,2 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --background: #f0ffff;
+    --navigation-bar: #2e354d;
+    --navigation-text: #d9d9d9;
+    --navigation-highlight: #1e90ff;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Inter";
+}
+
+.nav {
+    background-color: var(--navigation-bar);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 14px;    
+}
+
+.logo {
+    width: 106px;
+    height: 72px;
+    padding-left: 40px;
+}
+
+.logo:hover {
+    filter: brightness(1.4);
+}
+
+.shortcuts-list {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto 40px;
+}
+
+.shortcuts-list > * {
+    text-decoration: none;
+}
+
+.shortcut {
+    font-size: 14px;
+    color: var(--navigation-text);
+    padding: 15px;
+    transition: ease-in-out 100ms;
+}
+
+.shortcut:hover {
+    color: var(--navigation-highlight);
+}
+
+.highlight {
+    color: var(--navigation-highlight);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 3px;
+}
