@@ -6,11 +6,15 @@
     --navigation-bar: #2e354d;
     --navigation-text: #d9d9d9;
     --navigation-highlight: #1e90ff;
+    --main-text: grey;
+    --main-headers: black;
 }
 
 body {
     background-color: var(--background);
     font-family: "Inter";
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .nav {
@@ -18,7 +22,8 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    padding: 14px;    
+    padding: 14px;
+    width: 100%;
 }
 
 .logo {
@@ -56,4 +61,22 @@ body {
     color: var(--navigation-highlight);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 3px;
+}
+
+.socials-section, .right-section {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 20%;
+    background-color: beige;
+}
+
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+}
+
+.socials-list * {
+    font-size:  24px;
+    color: var(--main-text);
 }
