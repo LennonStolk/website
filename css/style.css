@@ -4,7 +4,7 @@
 /* General */
 
 :root {
-    --background: #dce9ea;
+    --background: linear-gradient(-270deg, rgb(231, 234, 243) 0%, rgb(217, 222, 238) 100%);
     --navigation-bar-left: rgba(52,66,113,1);
     --navigation-bar-right: rgba(46,53,77,1);
     --navigation-bar: linear-gradient(-135deg, var(--navigation-bar-right) 0%, var(--navigation-bar-left) 100%);
@@ -14,7 +14,7 @@
     --main-headers: #474745;
 }
 body {
-    background-color: var(--background);
+    background: var(--background);
     font-family: "Inter";
     display: flex;
     flex-flow: row wrap;
