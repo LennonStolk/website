@@ -195,6 +195,7 @@ body {
     margin: clamp(10px, 1vw, 20px) 0;
     font-size: clamp(10px, 1vw, 20px);;
     color: var(--main-text);
+    max-width: max(250px, 40vw);
 }
 
 
