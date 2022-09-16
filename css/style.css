@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+/* General */
+
 :root {
     --background: #dce9ea;
     --navigation-bar-left: rgba(52,66,113,1);
@@ -9,15 +11,23 @@
     --navigation-text: #d9d9d9;
     --highlight: #1e90ff;
     --main-text: grey;
-    --main-headers: black;
+    --main-headers: #474745;
 }
-
 body {
     background-color: var(--background);
     font-family: "Inter";
     display: flex;
     flex-flow: row wrap;
 }
+.highlight {
+    color: var(--highlight);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 3px;
+}
+
+
+
+/* Navigation bar */
 
 .nav {
     background: var(--navigation-bar);
@@ -28,21 +38,22 @@ body {
     width: 100%;
     height: 72px;
 }
-
 .nav > a {
     width: 0px;
 }
-
 .logo {
     height: 100%;
     aspect-ratio: 4/3;
     padding-left: 40px;
     transition: ease-in-out 200ms;
 }
-
 .logo:hover {
     filter: brightness(1.2);
 }
+
+
+
+/* Shortcuts list in navigation bar */
 
 .shortcuts-list {
     display: flex;
@@ -50,11 +61,9 @@ body {
     margin: auto 40px;
     transition: ease-in-out 200ms;
 }
-
 .shortcuts-list > * {
     text-decoration: none;
 }
-
 .shortcut {
     font-size: 14px;
     color: var(--navigation-text);
@@ -62,14 +71,12 @@ body {
     margin: 5px 5px;
     transition: ease-in-out 100ms;
 }
-
 .shortcuts-list > a:nth-child(5) > .shortcut {
     border-radius: 8px;
     padding: 15px;
     margin-left: 20px;
     border: 1.5px solid var(--highlight);
 }
-
 .shortcuts-list > a:nth-child(5) > .shortcut:hover {
     transform: none;
     background-color: var(--highlight);
@@ -78,17 +85,14 @@ body {
 .shortcuts-list > a:nth-child(5) > .shortcut:hover > .highlight {
     color: rgba(46,53,77,1);
 }
-
 .shortcut:hover {
     color: var(--highlight);
     transform: translateY(-2px);
 }
 
-.highlight {
-    color: var(--highlight);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 3px;
-}
+
+
+/* Shared for side sections */
 
 .socials-section, .right-section {
     display: flex;
@@ -98,18 +102,20 @@ body {
     bottom: 0;
 }
 
+
+
+/* Right section */
+
 .right-section {
     right: 0;
     align-items: flex-end;
 }
-
 .right-section-list {
     right: 0px;
     position: relative;
     width: min-content;
     margin-right: 20px;
 }
-
 .right-section-title {
     transform: rotate(270deg);
     transform-origin: left;
@@ -119,28 +125,15 @@ body {
     color: var(--main-text);
     transition: ease-in-out 200ms;
 }
-
 .right-section-title:hover {
     color: var(--highlight);
     transform: rotate(270deg) translateX(4px);
 }
 
-.main {
-    padding: 30px;
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-    margin: 0 20%;
-    color: var(--main-text);
-}
 
-.main h1, h2, h3 {
-    color: var(--main-headers);
-}
 
-.socials-list {
-    margin-left: 20px;
-}
+
+/* Socials section */
 
 .socials-list * {
     font-size:  24px;
@@ -148,12 +141,13 @@ body {
     padding: 8px;
     transition: ease-in-out 200ms;
 }
-
 .socials-list *:hover {
     color: var(--highlight);
     transform: translateY(-4px);
 }
-
+.socials-list {
+    margin-left: 20px;
+}
 .section-line {
     width: 1px;
     height: 90px;
@@ -161,6 +155,51 @@ body {
     padding: 0px;
     margin: 16px 36px 0px 36px;
 }
+
+
+
+/* Main content */
+
+.main {
+    padding: min(7vw, 40px);
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    margin: 30px 20%;
+    color: var(--main-text);
+}
+
+.main h1 {
+    margin: clamp(8px, 0.8vw, 16px) 0;
+    font-size: clamp(40px, 4vw, 80px);
+    font-weight: bold;
+    color: var(--main-headers);
+}
+.main h2 {
+    margin: clamp(6.4px, 0.64vw, 12.8px) 0;
+    font-size: clamp(32px, 3.2vw, 64px);
+    font-weight: bold;
+    color: var(--main-text);
+}
+.main h3 {
+    font-weight: bold;
+    color: var(--main-headers);
+}
+.main h4 {
+    font-size: clamp(12px, 1.2vw, 24px);
+    margin: max(8px, 0.8vw) 0;
+    color: var(--highlight);
+}
+.main p {
+    line-height: clamp(16px, 1.6vw, 32px);
+    margin: clamp(10px, 1vw, 20px) 0;
+    font-size: clamp(10px, 1vw, 20px);;
+    color: var(--main-text);
+}
+
+
+
+/* Media queries */
 
 @media only screen and (max-width: 770px) {
     .socials-section, .right-section {
@@ -178,4 +217,4 @@ body {
     .main {
         margin: 0;
     }
-  }
+}
