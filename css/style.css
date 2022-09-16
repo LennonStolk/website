@@ -42,13 +42,14 @@ body {
     width: 0px;
 }
 .logo {
-    height: 100%;
-    aspect-ratio: 4/3;
+    height: 45%;
+    aspect-ratio: 5/1;
+    padding: 20px;
     padding-left: 40px;
     transition: ease-in-out 200ms;
 }
 .logo:hover {
-    filter: brightness(1.2);
+    filter: brightness(0.6);
 }
 
 
@@ -202,7 +203,7 @@ body {
 
 /* Media queries */
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 840px) {
     .socials-section, .right-section {
         display: none;
     }
