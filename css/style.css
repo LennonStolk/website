@@ -161,6 +161,17 @@ body {
 
 /* Main content */
 
+@keyframes main-fade-in {
+    from {
+        transform: translateY(10vw) rotateY(30deg);
+        opacity: 0;
+    }
+    to { 
+        transform: none;
+        opacity: 1;
+    }
+}
+
 .main {
     padding: min(7vw, 40px);
     display: flex;
@@ -168,17 +179,21 @@ body {
     width: 100%;
     margin: 30px 20%;
     color: var(--main-text);
+    animation-name: main-fade-in;
+    animation-duration: 1.5s;
 }
-
 .main h1 {
     margin: clamp(8px, 0.8vw, 16px) 0;
     font-size: clamp(40px, 4vw, 80px);
+    letter-spacing: -3px;
     font-weight: bold;
     color: var(--main-headers);
+
 }
 .main h2 {
     margin: clamp(6.4px, 0.64vw, 12.8px) 0;
     font-size: clamp(32px, 3.2vw, 64px);
+    letter-spacing: -2.5px;
     font-weight: bold;
     color: var(--main-text);
 }
