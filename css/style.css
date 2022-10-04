@@ -222,6 +222,7 @@ body {
     border: none;
     border-radius: 8px;
     margin: clamp(20px, 2vw, 40px) 0;
+    border: 1px solid var(--highlight);
 }
 
 
