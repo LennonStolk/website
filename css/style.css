@@ -260,17 +260,17 @@ body {
 .about-me-flex {
     width: 100%;;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: start;
 }
 
 .about-me-text {
     width: 50%;
-    margin: 0 20px;
+    padding-right: 100px;
 }
 
 .about-me-image {
-    max-width: 300px;
+    max-width: min(300px, 40%);
     aspect-ratio: 1/1;
     flex-basis: 40%;
     border-radius: 20px;
@@ -306,5 +306,20 @@ body {
     }
     .about-me {
         margin: 140px auto 0 auto;
+    }
+    .about-me-text {
+        padding-right: 20px;
+    }
+    .about-me-image {
+        max-width: 100px;
+        aspect-ratio: 1/1;
+        flex-basis: 40%;
+        border-radius: 8px;
+        box-shadow: 10px 10px rgb(225, 225, 225);
+        transition: ease-in-out 200ms;
+    }
+    .about-me-image:hover {
+        transform: translateY(-8px) translateX(-8px);
+        box-shadow: 18px 18px rgb(242, 242, 242);
     }
 }
