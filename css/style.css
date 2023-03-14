@@ -1,325 +1,332 @@
-@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Castoro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 /* General */
 
 :root {
-    --background: white;
-    --navigation-bar-left: rgba(52,66,113,1);
-    --navigation-bar-right: rgba(46,53,77,1);
-    --navigation-bar: linear-gradient(-135deg, var(--navigation-bar-right) 0%, var(--navigation-bar-left) 100%);
-    --navigation-text: #d9d9d9;
-    --highlight: #1e90ff;
-    --button: #d9d9d9;
-    --main-text: grey;
-    --main-headers: #474745;
+  --background: rgb(235, 235, 235);
+  --navigation-bar-left: rgb(20, 38, 89);
+  --navigation-bar-right: rgb(21, 23, 25);
+  --navigation-bar: linear-gradient(
+    -135deg,
+    var(--navigation-bar-right) 0%,
+    var(--navigation-bar-left) 100%
+  );
+  --navigation-text: #d9d9d9;
+  --highlight: #1d72c7;
+  --button: #d9d9d9;
+  --main-text: grey;
+  --main-headers: #474745;
 }
 body {
-    background: var(--background);
-    font-family: "Inter";
-    display: flex;
-    flex-flow: row wrap;
+  background: var(--background);
+  font-family: "Inter";
+  display: flex;
+  flex-flow: row wrap;
 }
 .highlight {
-    color: var(--highlight);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 3px;
+  color: var(--highlight);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 3px;
 }
-
-
 
 /* Navigation bar */
 
 .nav {
-    background: var(--navigation-bar);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: 14px;
-    width: 100%;
-    height: 72px;
+  background: var(--navigation-bar);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 14px;
+  width: 100%;
+  height: 72px;
+  margin: 0 20%;
+  border-radius: 20px 20px 20px 20px;
+  margin-top: 10px;
+  transition: ease-in-out 200ms;
 }
 .nav > a {
-    width: 0px;
+  width: 0px;
 }
 .logo {
-    height: 45%;
-    aspect-ratio: 5/1;
-    padding: 20px;
-    padding-left: 40px;
-    transition: ease-in-out 200ms;
+  height: 45%;
+  aspect-ratio: 5/1;
+  padding: 20px;
+  padding-left: 40px;
+  transition: ease-in-out 200ms;
 }
 .logo:hover {
-    filter: brightness(0.6);
+  filter: brightness(0.6);
 }
-
-
 
 /* Shortcuts list in navigation bar */
 
 .shortcuts-list {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: auto 40px;
-    transition: ease-in-out 200ms;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: auto 40px;
+  transition: ease-in-out 200ms;
 }
 .shortcuts-list > * {
-    text-decoration: none;
+  text-decoration: none;
 }
 .shortcut {
-    font-size: 14px;
-    color: var(--navigation-text);
-    padding: 15px 10px;
-    margin: 5px 5px;
-    transition: ease-in-out 100ms;
+  font-size: 14px;
+  color: var(--navigation-text);
+  padding: 15px 10px;
+  margin: 5px 5px;
+  transition: ease-in-out 100ms;
 }
 .shortcuts-list > a:nth-child(5) > .shortcut {
-    border-radius: 8px;
-    padding: 15px;
-    margin-left: 20px;
-    border: 1.5px solid var(--highlight);
+  border-radius: 8px;
+  padding: 15px;
+  margin-left: 20px;
+  border: 1.5px solid var(--highlight);
 }
 .shortcuts-list > a:nth-child(5) > .shortcut:hover {
-    transform: none;
-    background-color: var(--highlight);
+  transform: none;
+  background-color: var(--highlight);
 }
 
 .shortcuts-list > a:nth-child(5) > .shortcut:hover > .highlight {
-    color: rgba(46,53,77,1);
+  color: rgba(46, 53, 77, 1);
 }
 .shortcut:hover {
-    color: var(--highlight);
-    transform: translateY(-2px);
+  color: var(--highlight);
+  transform: translateY(-2px);
 }
-
-
 
 /* Shared for side sections */
 
-.socials-section, .right-section {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 20%;
-    position: fixed;
-    bottom: 0;
+.socials-section,
+.right-section {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 20%;
+  position: fixed;
+  bottom: 0;
 }
-
-
 
 /* Right section */
 
 .right-section {
-    right: 0;
-    align-items: flex-end;
+  right: 0;
+  align-items: flex-end;
 }
 .right-section-list {
-    right: 0px;
-    position: relative;
-    width: min-content;
-    margin-right: 20px;
+  right: 0px;
+  position: relative;
+  width: min-content;
+  margin-right: 20px;
 }
 .right-section-title {
-    transform: rotate(270deg);
-    transform-origin: left;
-    padding: 0px;
-    margin: 8px 36px;
-    width: 0;
-    color: var(--main-text);
-    transition: ease-in-out 200ms;
+  transform: rotate(270deg);
+  transform-origin: left;
+  padding: 0px;
+  margin: 8px 36px;
+  width: 0;
+  color: var(--main-text);
+  transition: ease-in-out 200ms;
 }
 .right-section-title:hover {
-    color: var(--highlight);
-    transform: rotate(270deg) translateX(4px);
+  color: var(--highlight);
+  transform: rotate(270deg) translateX(4px);
 }
-
-
-
 
 /* Socials section */
 
 .socials-list * {
-    font-size:  24px;
-    color: var(--main-text);
-    padding: 8px;
-    transition: ease-in-out 200ms;
+  font-size: 24px;
+  color: var(--main-text);
+  padding: 8px;
+  transition: ease-in-out 200ms;
 }
 .socials-list *:hover {
-    color: var(--highlight);
-    transform: translateY(-4px);
+  color: var(--highlight);
+  transform: translateY(-4px);
 }
 .socials-list {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 .section-line {
-    width: 1px;
-    height: 90px;
-    background-color: var(--main-text);
-    padding: 0px;
-    margin: 16px 36px 0px 36px;
+  width: 1px;
+  height: 90px;
+  background-color: var(--main-text);
+  padding: 0px;
+  margin: 16px 36px 0px 36px;
 }
-
-
 
 /* Main content */
 
 @keyframes main-fade-in {
-    from {
-        transform: translateY(10vw) rotateY(30deg);
-        opacity: 0;
-    }
-    to { 
-        transform: none;
-        opacity: 1;
-    }
+  from {
+    transform: translateY(10vw) rotateY(30deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 .main {
-    padding: min(7vw, 40px);
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-    margin: 150px 20%;
-    color: var(--main-text);
-    animation-name: main-fade-in;
-    animation-duration: 1s;
+  padding: min(7vw, 40px);
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 10px 20%;
+  color: var(--main-text);
+  background-color: white;
+  animation-name: main-fade-in;
+  animation-duration: 1s;
+  border-radius: 20px 20px 0 0;
+  transition: ease-in-out 200ms;
 }
 .main h1 {
-    margin: clamp(8px, 0.8vw, 16px) 0;
-    font-size: clamp(40px, 4vw, 80px);
-    letter-spacing: -2px;
-    font-weight: bold;
-    color: var(--main-headers);
-
+  margin: clamp(8px, 0.8vw, 16px) 0;
+  font-size: clamp(40px, 4vw, 80px);
+  letter-spacing: -2px;
+  font-weight: bold;
+  color: var(--main-headers);
 }
 .main h2 {
-    margin: clamp(6.4px, 0.64vw, 12.8px) 0;
-    font-size: clamp(28px, 2.8vw, 56px);
-    letter-spacing: -1.5px;
-    font-weight: bold;
-    color: var(--main-text);
+  margin: clamp(6.4px, 0.64vw, 12.8px) 0;
+  font-size: clamp(28px, 2.8vw, 56px);
+  letter-spacing: -1.5px;
+  font-weight: bold;
+  color: var(--main-text);
 }
 .main h3 {
-    font-weight: bold;
-    color: var(--main-headers);
+  font-weight: bold;
+  color: var(--main-headers);
 }
 .main h4 {
-    font-size: clamp(12px, 1.2vw, 24px);
-    margin: max(8px, 0.8vw) 0;
-    color: var(--highlight);
+  font-size: clamp(12px, 1.2vw, 24px);
+  margin: max(8px, 0.8vw) 0;
+  color: var(--highlight);
 }
 .main p {
-    line-height: clamp(16px, 1.6vw, 32px);
-    margin: clamp(10px, 1vw, 20px) 0;
-    font-size: clamp(10px, 1vw, 20px);
-    color: var(--main-text);
-    max-width: max(250px, 40vw);
+  line-height: clamp(16px, 1.6vw, 32px);
+  margin: clamp(10px, 1vw, 20px) 0;
+  font-size: clamp(10px, 1vw, 20px);
+  color: var(--main-text);
+  max-width: max(250px, 40vw);
 }
 .main button {
-    font-size: clamp(8px, 0.8vw, 16px);
-    color: var(--highlight);
-    padding: clamp(10px, 1vw, 20px);
-    width: max-content;
-    border: none;
-    border-radius: 8px;
-    margin: clamp(20px, 2vw, 40px) 0;
-    border: 1px solid var(--highlight);
+  font-size: clamp(8px, 0.8vw, 16px);
+  color: var(--highlight);
+  padding: clamp(10px, 1vw, 20px);
+  width: max-content;
+  border: none;
+  border-radius: 8px;
+  margin: clamp(20px, 2vw, 40px) 0;
+  border: 1px solid var(--highlight);
 }
 
 .section-title {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    font-size: clamp(14px, 1.4vw, 28px);
-    margin-bottom: 40px;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: clamp(14px, 1.4vw, 28px);
+  margin-bottom: 40px;
+  align-items: center;
 }
 
 .section-title-number {
-    color: var(--highlight);
-    margin-right: clamp(10px, 1vw, 20px);
-    font-size: clamp(11px, 1.1vw, 22px);
+  color: var(--highlight);
+  margin-right: clamp(10px, 1vw, 20px);
+  font-size: clamp(11px, 1.1vw, 22px);
 }
 
 .section-title-text {
-    margin-right: clamp(10px, 1vw, 20px);
+  margin-right: clamp(10px, 1vw, 20px);
 }
 
 .section-title-line {
-    display: block;
-    background-color: var(--navigation-text);
-    height: 1px;
-    flex-grow: 1;
-    max-width: clamp(150px, 15vw, 300px);
+  display: block;
+  background-color: var(--navigation-text);
+  height: 1px;
+  flex-grow: 1;
+  max-width: clamp(150px, 15vw, 300px);
 }
 
 .about-me {
-    width: 85%;
-    margin: 250px auto 0 auto;
+  width: 85%;
+  margin: 250px auto 0 auto;
 }
 
 .about-me-flex {
-    width: 100%;;
-    display: flex;
-    align-items: flex-start;
-    justify-content: start;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
 }
 
 .about-me-text {
-    width: 50%;
-    padding-right: 100px;
+  width: 50%;
+  padding-right: 100px;
 }
 
 .about-me-image {
-    max-width: min(300px, 40%);
-    aspect-ratio: 1/1;
-    flex-basis: 40%;
-    border-radius: 20px;
-    box-shadow: 30px 30px rgb(225, 225, 225);
-    transition: ease-in-out 200ms;
+  max-width: min(300px, 40%);
+  aspect-ratio: 1/1;
+  flex-basis: 40%;
+  border-radius: 20px;
+  box-shadow: 30px 30px rgb(225, 225, 225);
+  transition: ease-in-out 200ms;
 }
 
 .about-me-image:hover {
-    transform: translateY(-20px) translateX(-20px);
-    box-shadow: 50px 50px rgb(242, 242, 242);
+  transform: translateY(-20px) translateX(-20px);
+  box-shadow: 50px 50px rgb(242, 242, 242);
 }
 
 /* Media queries */
 
+@media only screen and (max-width: 1400px) {
+  .nav {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
 @media only screen and (max-width: 840px) {
-    .socials-section, .right-section {
-        display: none;
-    }
-    .shortcuts-list {
-        margin-right: 0px;
-    }
-    .shortcuts-list > a:not(:last-child){
-        display: none;
-    }
-    .logo {
-        padding-left: 10px;
-    }
-    .main {
-        margin: 30px 0;
-    }
-    .section-title {
-        margin-bottom: 20px;
-    }
-    .about-me {
-        margin: 140px auto 0 auto;
-    }
-    .about-me-text {
-        padding-right: 20px;
-    }
-    .about-me-image {
-        max-width: 100px;
-        aspect-ratio: 1/1;
-        flex-basis: 40%;
-        border-radius: 8px;
-        box-shadow: 10px 10px rgb(225, 225, 225);
-        transition: ease-in-out 200ms;
-    }
-    .about-me-image:hover {
-        transform: translateY(-8px) translateX(-8px);
-        box-shadow: 18px 18px rgb(242, 242, 242);
-    }
+  .socials-section,
+  .right-section {
+    display: none;
+  }
+  .shortcuts-list {
+    margin-right: 0px;
+  }
+  .shortcuts-list > a:not(:last-child) {
+    display: none;
+  }
+  .logo {
+    padding-left: 10px;
+  }
+  .main {
+    margin: 10px;
+  }
+  .section-title {
+    margin-bottom: 20px;
+  }
+  .about-me {
+    margin: 140px auto 0 auto;
+  }
+  .about-me-text {
+    padding-right: 20px;
+  }
+  .about-me-image {
+    max-width: 100px;
+    aspect-ratio: 1/1;
+    flex-basis: 40%;
+    border-radius: 8px;
+    box-shadow: 10px 10px rgb(225, 225, 225);
+    transition: ease-in-out 200ms;
+  }
+  .about-me-image:hover {
+    transform: translateY(-8px) translateX(-8px);
+    box-shadow: 18px 18px rgb(242, 242, 242);
+  }
 }
