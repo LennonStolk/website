@@ -135,7 +135,7 @@ body {
   padding: 0px;
   margin: 8px 36px;
   width: 0;
-  color: var(--main-text);
+  color: var(--muted-text);
   transition: ease-in-out 200ms;
 }
 .right-section-title:hover {
@@ -147,7 +147,7 @@ body {
 
 .socials-list * {
   font-size: 24px;
-  color: var(--main-text);
+  color: var(--muted-text);
   padding: 8px;
   opacity: 1;
   transition: ease-in-out 200ms;
@@ -164,7 +164,7 @@ body {
 .section-line {
   width: 1px;
   height: 90px;
-  background-color: var(--main-text);
+  background-color: var(--muted-text);
   padding: 0px;
   margin: 16px 36px 0px 36px;
 }
