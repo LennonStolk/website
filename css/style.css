@@ -405,6 +405,25 @@ body {
   margin: 100px auto 0 auto;
 }
 
+.contact-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-link {
+  padding: 20px;
+  margin: 5px 0;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: ease-in-out 200ms;
+}
+
+.contact-link:hover {
+  margin: 5px -5px 5px 5px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* Media queries */
 
 @media only screen and (max-width: 1400px) {
