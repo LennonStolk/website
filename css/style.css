@@ -400,6 +400,10 @@ body {
   font-weight: 600;
 }
 
+.portfolio-link {
+  text-decoration: none !important;
+}
+
 .contact {
   width: 100%;
   margin: 100px auto 0 auto;
@@ -422,6 +426,84 @@ body {
 .contact-link:hover {
   margin: 5px -5px 5px 5px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+  text-align: center;
+  font-size: clamp(24px, 2.4vw, 40px) !important;
+}
+
+.project-labels {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 12px;
+  color: var(--main-text);
+  text-align: center;
+}
+
+.project-label {
+  font-size: clamp(14px, 1.4vw, 24px) !important;
+  background-color: #f0f0f0;
+
+  padding: 5px;
+  font-weight: 600;
+  margin: 1px;
+  border-radius: 4px;
+}
+
+.project-description-section {
+  width: 100%;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-description {
+  width: min(100%, 600px);
+  text-align: center;
+}
+
+.project-images-section {
+  width: 100%;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  width: min(100%, 600px);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  transition: ease-in-out 200ms;
+  padding: 10px;
+}
+
+.project-image:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.project-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.project-buttons li {
+  text-align: center;
+  flex-grow: 1;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.project-buttons li:hover {
+  margin: 0 5px;
 }
 
 /* Media queries */
