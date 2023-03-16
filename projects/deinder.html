@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lennon Stolk's Portfolio Website</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+
+<body>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/1f716bedd7.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js" defer></script>
+
+    <!-- Navigation bar -->
+    <nav class="nav" id="nav">
+        <a href="../index.html">
+            <img src="../img/logo.png" alt="Website logo" class="logo" id="logo">
+        </a>
+        <ul class="shortcuts-list" id="shortcuts-list">
+            <a href="../index.html#about-me">
+                <li class="shortcut"><span class="highlight">01.</span> Over mij</li>
+            </a>
+            <a href="../index.html#experience">
+                <li class="shortcut"><span class="highlight">02.</span> Ervaring</li>
+            </a>
+            <a href="../index.html#portfolio">
+                <li class="shortcut"><span class="highlight">03.</span> Portfolio</li>
+            </a>
+            <a href="../index.html#contact">
+                <li class="shortcut"><span class="highlight">04.</span> Contact</li>
+            </a>
+            <a href="../cvs/LennonStolk.pdf">
+                <li class="shortcut"><span class="highlight">Bekijk CV</span></li>
+            </a>
+        </ul>
+    </nav>
+
+    <!-- Social media section -->
+    <aside class="socials-section" id="socials-section">
+        <ul class="socials-list" id="socials-list">
+            <li class="socials-item" id="socials-item">
+                <a href="https://www.github.com/LennonStolk">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a href="https://www.linkedin.com/in/lennonstolk/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a href="mailto: lennon27@live">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            <li class="socials-item">
+                <a href="tel:+310648534235">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+            <li class="section-line"></li>
+        </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main" id="main">
+
+        <!-- Project title -->
+        <section class="project-title-section">
+            <h1 class="project-title">Restaurant D' Einder</h1>
+            <div class="project-labels">
+                <span class="project-label">2022</span>
+                <span class="project-label">Angular</span>
+                <span class="project-label">NestJS</span>
+                <span class="project-label">TypeScript</span>
+            </div>
+            <div class="project-labels">
+                <span class="project-label">MongoDB</span>
+                <span class="project-label">Bootstrap</span>
+            </div>
+        </section>
+
+        <!-- Description -->
+        <section class="project-description-section">
+            <div class="section-title" style="justify-content: center;  max-width: 600px;">
+                <div class="section-title-line"></div>
+                <h3 class="section-title-text" style="margin-left: clamp(10px, 1vw, 20px);">Beschrijving</h3>
+                <div class="section-title-line"></div>
+            </div>
+
+            <p class="project-description">
+                Dit was mijn eindproject voor mijn Software Developer opleiding. We moesten een website/applicatie maken
+                voor een fictief restaurant gebaseerd op interviews van de medewerkers. Ik heb het gemaakt in een team
+                van vier en de taal die we ervoor hadden gekozen was TypeScript.
+            </p>
+
+            <p class="project-description">
+                We hebben de applicatie opgebouwd uit vier onderdelen waaraan ik allemaal heb gewerkt:
+            <ul class="project-description-list">
+                <li>Een NestJS back-end met authenticatie</li>
+                <li>Een MongoDB instance in de cloud</li>
+                <li>Een Angular website voor klanten</li>
+                <li>Een Angular admin paneel voor medewerkers</li>
+            </ul>
+            </p>
+
+            <p class="project-description">
+                De website heeft een groot aantal mogelijkheden. Bijvoorbeeld: Tafels reserveren als een klant, menu's
+                en dranken kunnen toevoegen aan een winkelmandje, contact opnemen met het restaurant, inloggen en
+                uitloggen, tafels, menu's en gerechten beheren als admin.
+            </p>
+
+            <ul class="project-buttons">
+                <li class="contact-link">
+                    <i class="fa-brands fa-square-github"></i>
+                    Repository: <a href="https://github.com/horizoncollege/portfolio-d-einder-team-3-1">GitHub</a><br>
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Project images -->
+        <section class="project-images-section">
+            <div class="section-title" style="justify-content: center; max-width: 600px;">
+                <div class="section-title-line"></div>
+                <h3 class="section-title-text" style="margin-left: clamp(10px, 1vw, 20px);">Afbeeldingen</h3>
+                <div class="section-title-line"></div>
+            </div>
+            <img src="../img/projects/deinder1.png" alt="Plaatje van reservering paneel in project D' Einder"
+                class="project-image">
+            <img src="../img/projects/deinder2.png" alt="Plaatje van menu pagina in project D' Einder"
+                class="project-image">
+            <img src="../img/projects/deinder3.png" alt="Plaatje van contact pagina in project D' Einder"
+                class="project-image">
+            <img src="../img/projects/deinder4.png" alt="Plaatje van admin paneel project D' Einder"
+                class="project-image">
+        </section>
+
+    </main>
+
+    <!-- Right-hand filler section -->
+    <aside class="right-section" id="right-section">
+        <ul class="right-section-list" id="right-section-list">
+            <li class="right-section-title">
+                lennonstolk.nl
+            </li>
+            <li class="section-line"></li>
+        </ul>
+    </aside>
+
+</body>
+
+</html>
