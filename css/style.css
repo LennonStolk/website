@@ -4,7 +4,7 @@
 /* General */
 
 :root {
-  --background: rgb(235, 235, 235);
+  --background: rgb(240, 240, 240);
   --navigation-bar-left: rgb(20, 38, 89);
   --navigation-bar-right: rgb(21, 23, 25);
   --navigation-bar: linear-gradient(
@@ -146,9 +146,11 @@ body {
 /* Socials section */
 
 .socials-list * {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--muted-text);
-  padding: 8px;
+  margin-left: 3px;
+  margin-bottom: -3px;
+  padding: 6px;
   opacity: 1;
   transition: ease-in-out 200ms;
 }
@@ -196,15 +198,15 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .main h1 {
-  margin: clamp(6.4px, 0.64vw, 12.8px) 0;
-  font-size: clamp(28px, 2.8vw, 56px);
+  margin: 6.4px 0;
+  font-size: 28px;
   letter-spacing: -2px;
   font-weight: bold;
   color: var(--main-headers);
 }
 .main h2 {
-  margin: clamp(6.4px, 0.64vw, 12.8px) 0;
-  font-size: clamp(28px, 2.8vw, 56px);
+  margin: 6.4px 0;
+  font-size: 28px;
   letter-spacing: -1.5px;
   font-weight: bold;
   color: var(--main-text);
@@ -213,27 +215,27 @@ body {
   font-weight: bold;
   color: var(--main-headers);
   transition: ease-in-out 200ms;
-  font-size: clamp(16px, 1.5vw, 28px);
+  font-size: 16px;
 }
 .main h3:hover {
   color: var(--highlight);
 }
 .main h4 {
-  font-size: clamp(12px, 1.2vw, 24px);
-  margin: max(8px, 0.8vw) 0;
+  font-size: 16px;
+  margin: 8px 0;
   color: var(--highlight);
 }
 .main p {
-  line-height: clamp(22px, 1.6vw, 32px);
-  margin: clamp(10px, 1vw, 20px) 0;
-  font-size: clamp(14px, 1vw, 20px);
+  line-height: 22px;
+  margin: 10px 0;
+  font-size: 14px;
   max-width: 1000px;
   color: var(--main-text);
 }
 .main button {
-  font-size: clamp(8px, 0.8vw, 16px);
+  font-size: 8px;
   color: var(--highlight);
-  padding: clamp(10px, 1vw, 20px);
+  padding: 10px;
   width: max-content;
   border: none;
   border-radius: 8px;
@@ -245,19 +247,19 @@ body {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  font-size: clamp(14px, 1.4vw, 28px);
+  font-size: 14px;
   margin-bottom: 40px;
   align-items: center;
 }
 
 .section-title-number {
   color: var(--highlight);
-  margin-right: clamp(10px, 1vw, 20px);
-  font-size: clamp(11px, 1.1vw, 22px);
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 .section-title-text {
-  margin-right: clamp(10px, 1vw, 20px);
+  margin-right: 10px;
 }
 
 .section-title-line {
@@ -265,23 +267,24 @@ body {
   background-color: var(--navigation-text);
   height: 1px;
   flex-grow: 1;
-  max-width: clamp(150px, 15vw, 300px);
+  max-width: 150px;
 }
 
 .about-me {
   width: 100%;
-  margin: 100px auto 0 auto;
+  margin: 75px auto 0 auto;
 }
 
 .about-me-flex {
   width: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: start;
+  justify-content: space-between;
 }
 
 .about-me-text {
   flex-grow: 1;
+  max-width: 600px !important;
   padding-right: 2vw;
 }
 
@@ -302,7 +305,7 @@ body {
 
 .experience {
   width: 100%;
-  margin: 100px auto 0 auto;
+  margin: 75px auto 0 auto;
 }
 
 .experience-list {
@@ -311,12 +314,12 @@ body {
 }
 
 .experience-block {
-  width: min(700px, 86%);
+  width: min(600px, 86%);
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  padding: min(30px, 5vw);
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-bottom: 10px;
   transition: ease-in-out 200ms;
 }
 
@@ -326,30 +329,32 @@ body {
 
 .experience-role {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(14px, 1.4vw, 20px);
+  font-size: 14px;
   font-weight: 600;
-  margin: 10px 0;
+  margin-bottom: 15px;
   color: var(--muted-text);
 }
 .experience-company {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(14px, 1.4vw, 20px);
+  font-size: 14px;
   color: var(--main-headers);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .experience-date-location {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(12px, 1.2vw, 18px);
+  font-size: 12px;
   color: var(--muted-text);
 }
 .experience-description {
-  padding: 15px 30px 0 30px;
+  padding: 5px 15px 0 15px;
+  font-size: 14px !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--main-headers);
 }
 
 .portfolio {
   width: 100%;
-  margin: 100px auto 0 auto;
+  margin: 75px auto 0 auto;
 }
 
 .portfolio-list {
@@ -363,8 +368,8 @@ body {
 
 .portfolio-block {
   width: 280px;
-  height: 220px;
-  margin: 10px;
+  height: 210px;
+  margin: 5px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -384,18 +389,19 @@ body {
 
 .portfolio-title {
   padding: 10px;
+  font-size: 14px !important;
   color: var(--main-headers);
 }
 
 .portfolio-labels {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 5px;
+  padding: 0 10px;
   color: var(--muted-text);
 }
 
 .portfolio-label {
   background-color: #fafafa;
-  font-size: 14px;
+  font-size: 12px;
   padding: 5px;
   font-weight: 600;
 }
@@ -406,16 +412,19 @@ body {
 
 .contact {
   width: 100%;
-  margin: 100px auto 0 auto;
+  margin: 75px auto 0 auto;
 }
 
 .contact-links {
+  min-width: max-content;
+  width: 300px;
   display: flex;
   flex-direction: column;
 }
 
 .contact-link {
-  padding: 20px;
+  font-size: 12px;
+  padding: 15px;
   margin: 5px 0;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 5px;
@@ -430,7 +439,7 @@ body {
 
 .project-title {
   text-align: center;
-  font-size: clamp(24px, 2.4vw, 40px) !important;
+  font-size: 32px !important;
 }
 
 .project-labels {
@@ -441,18 +450,17 @@ body {
 }
 
 .project-label {
-  font-size: clamp(14px, 1.4vw, 24px) !important;
+  font-size: 14px !important;
   background-color: #f0f0f0;
-
   padding: 5px;
   font-weight: 600;
-  margin: 1px;
+  margin: 0px;
   border-radius: 4px;
 }
 
 .project-description-section {
   width: 100%;
-  margin: 100px auto 0 auto;
+  margin: 75px auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -465,9 +473,9 @@ body {
 }
 
 .project-description-list {
-  line-height: clamp(22px, 1.6vw, 32px);
+  line-height: 22px;
   margin: clamp(10px, 1vw, 20px) 0;
-  font-size: clamp(14px, 1vw, 20px);
+  font-size: 14px;
   max-width: 1000px;
   color: var(--main-text);
   list-style-type: disc;
@@ -475,7 +483,7 @@ body {
 
 .project-images-section {
   width: 100%;
-  margin: 100px auto 0 auto;
+  margin: 75px auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
