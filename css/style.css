@@ -245,6 +245,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   font-size: 14px;
+  margin-top: 180px;
   margin-bottom: 40px;
   align-items: center;
 }
@@ -355,6 +356,10 @@ body {
   color: var(--highlight);
 }
 
+.experience-school {
+  color: #474745;
+}
+
 .portfolio {
   width: 100%;
   margin: 75px auto 0 auto;
@@ -388,6 +393,7 @@ body {
   width: 280px;
   height: 140px;
   background-color: rgb(240, 240, 240);
+  filter: brightness(0.6);
 }
 
 .portfolio-title {
@@ -423,6 +429,7 @@ body {
   width: 300px;
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 }
 
 .contact-link {
