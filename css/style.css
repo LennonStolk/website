@@ -393,7 +393,6 @@ body {
   width: 280px;
   height: 140px;
   background-color: rgb(240, 240, 240);
-  filter: brightness(0.6);
 }
 
 .portfolio-title {
