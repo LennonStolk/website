@@ -222,6 +222,13 @@ body {
   margin: 8px 0;
   color: var(--highlight);
 }
+.portfolio-category {
+  font-size: 22px;
+  margin: 12px 4px;
+  margin-top: 80px;
+  color: var(--main-text);
+  font-weight: bold;
+}
 .main p {
   line-height: 22px;
   margin: 10px 0;
@@ -245,7 +252,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   font-size: 14px;
-  margin-top: 0px;
+  margin-top: 50px;
   margin-bottom: 40px;
   align-items: center;
 }
