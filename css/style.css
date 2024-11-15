@@ -23,14 +23,6 @@ body {
   font-family: "Inter";
   display: flex;
   flex-flow: row wrap;
-  background-image: url(../img/background.jpg);
-  background-size: 500px auto;
-}
-@media screen and (min-width: 875px) {
-  body {
-    margin-top: 10%;
-    scale: 1.1;
-  }
 }
 .highlight {
   color: var(--highlight);
@@ -201,7 +193,6 @@ body {
   background-color: white;
   border-radius: 20px;
   transition: ease-in-out 200ms;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .main h1 {
   margin: 6.4px 0;
