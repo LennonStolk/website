@@ -489,17 +489,19 @@ body {
 }
 
 .project-description {
-  width: min(100%, 600px);
-  text-align: center;
+  width: min(100%, 800px);
+  text-align: left;
 }
 
 .project-description-list {
   line-height: 22px;
   margin: clamp(10px, 1vw, 20px) 0;
+  padding-left: 10%;
   font-size: 14px;
   max-width: 1000px;
   color: var(--main-text);
   list-style-type: disc;
+  width: min(100%, 800px);
 }
 
 .project-images-section {
@@ -512,7 +514,7 @@ body {
 }
 
 .project-image {
-  width: min(100%, 600px);
+  width: min(100%, 800px);
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 5px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
