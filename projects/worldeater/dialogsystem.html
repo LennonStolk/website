@@ -22,31 +22,11 @@
 
         <!-- Project title -->
         <section class="project-title-section">
-            <h1 class="project-title">World Eater - Dialog System</h1>
+            <h1 class="project-title">World Eater<span style="font-weight: normal;"> - Dialog system developer blog</span> </h1>
         </section>
 
         <!-- Description -->
         <section class="project-description-section">
-            <p class="project-description">
-                <span style="font-style: italic; font-weight: bold;">The world eater has devoured many planets before and is well known for it. <br>
-                You must stop it. Use your attacks and jetpack to defeat it. <br>
-                But don't wait to long.....</span><br>
-                <br>
-                World Eater is een game die ik voor mijn opleiding heb gemaakt in een team van 4 man.
-                Ik werkte in dit team als scrum master, game designer en programmeur.
-                De opdracht was om een bossfight te maken met meerdere fasen en een unieke core mechanic.</span>
-                Bij deze game is dit <span style="font-style: italic;">Gravitational Pull</span>.<br>
-                <br>
-                Bij dit project heb ik het volgende ontworpen en geprogrammeerd:
-                <ul class="project-description-list">
-                    <li>Dialog system</li>
-                    <li>Notification system</li>
-                    <li>Jetpack physics</li>
-                    <li>Player dash action</li>
-                    <li>Bugfixes voor de bestaande planeet physics</li>
-                    <li>Polish voor de graphics</li>
-                </ul>
-            </p>
 
             <h2>Inleiding</h2>
 
@@ -60,7 +40,33 @@
 
             <h2>Style</h2>
 
-            <h2>Rich text en shaking effect</h2>
+            <h2>Rich text & custom effects</h2>
+
+            <p class="project-description">
+                <br>
+                Unity's UI toolkit heeft support voor Rich Text, dus ik heb dit gebruikt om simpele effecten zoals 
+                gekleurde en schuin-gedrukte tekst toe te voegen aan de dialog system. 
+                Deze kunnen ingevoerd worden in een string door middel van tags die een beetje lijken op HTML. <br>
+                Zo wordt bijvoorbeeld de onderstaande tekst omgetoverd tot "<i style="font-style: italic;">Hello</i>, <b style="font-weight: bold;">world.</b>"
+                <code style="font-family: Times New Roman;"><pre>&lt;i&gt;Hello&lt;/i&gt;, &lt;b&gt;world&lt;/b&gt;</pre></code>
+            </p>
+
+            <p class="project-description">
+                Maar eigenlijk wilden we nog meer effecten toevoegen aan de dialog system om de tekst meer leven te geven.
+                Ik heb besloten deze effecten toe te voegen: 
+                Regenboogkleurige, golvende, op en neergaande, schuddende en draaiende tekst. 
+                Ten slotte heb ik ook nog wat opties om tekst groter en kleiner te maken toegevoegd als tekst effect.
+            </p>
+
+            <p class="project-description">
+                Deze custom tekst effecten werden samen gevoegd in één C# enum.
+            </p>
+
+            
+
+            <img src="img/Shaking.gif" alt="Plaatje van Dialog System" class="project-image" style="width: 400px;">
+            
+            <img src="img/Rainbow.gif" alt="Plaatje van Dialog System" class="project-image" style="width: 400px;">            
 
             <h2>Soepel afwisselen van berichten</h2>
 
