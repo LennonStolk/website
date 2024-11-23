@@ -28,19 +28,64 @@
         <!-- Description -->
         <section class="project-description-section">
 
-            <h2>Inleiding</h2>
+            <h2><br><br><br>Inleiding</h2>
 
-            <h2>Ontwerp</h2>
+            <p class="project-description">
+                <br>
+                Welkom bij mijn developer blog die gaat over de dialog system feature die ik heb gebouwd
+                voor de game "World Eater". In deze developer blog ga ik laten zien hoe ik dit systeem heb
+                ontworpen, geprogrammeerd en hoe het er uiteindelijk uit ziet.
+                <br><br>
+                Een aantal features van dit dialog systeem: Branching dialogs, callbacks voor custom code, afbeeldingen, geluiden en teksteffecten.
+                <br><br>
+            </p>
 
-            <img src="img/dialogsystem1.png" alt="Plaatje van Dialog System" class="project-image">
+            <img src="img/dialogsystem1.png" alt="Plaatje van Dialog System" class="project-image" style="width: 600px;">
 
-            <h2>Developer experience</h2>
+            <h2><br><br><br>Ontwerp</h2>
 
-            <h2>Stack Overflow Exception...?</h2>
+            <p class="project-description">
+                <br>
+                Ik heb het simpel gehouden qua ontwerp. Donkere doorzichtige afgeronde rechthoeken met een grijze rand als achtergrond.
+                En dan lichtere blauwe of witte tekst voor contrast en omdat het past bij het ruimte thema van het spel. Plaatje aan de linkerkant, de rest aan de rechterkant. En knoppen of "click to continue" tekst rechtsonder,
+                afhankelijk van of de dialog meerdere opties heeft. De knoppen worden groter als de muis er overheen zit om duidelijk te maken dat je er op kan klikken.
+                <br><br>
+                Hieronder zie je een voorbeeld van een dialoog met meerdere opties en een placeholder als plaatje. 
+                Je kan zien dat de style van de dialog system consequent is met de style van de notification system.
+                <br><br>
+            </p>
 
-            <h2>Style</h2>
+            <h2><br><br><br>Developer experience</h2>
 
-            <h2>Rich text & custom effects</h2>
+            <p class="project-description">
+                <br>
+                Als je de code voor elke dialog moet vanaf nul moet schrijven, dan ben je heel lang bezig om een mooi gesprek te maken in je game.
+                Daarom heb ik me ook gefocust op DX (Developer eXperience). Hiervoor heb ik classes voor dialogs, dialog geluiden, dialog afbeeldingen en dialog opties gemaakt die het leven makkelijker maken voor developers.
+                <br><br>
+                Hieronder een voorbeeld van een van die helper classes.
+                <br><br>
+            </p>
+
+            <img src="img/basedialog.png" alt="Plaatje van Dialog System" class="project-image" style="width: 600px;">
+
+            <p class="project-description">
+                <br>
+                De belangrijkste class is BaseDialog. Hier stammen nog twee classes van af, namelijk SimpleContinuingDialog en SimpleEndingDialog.
+                Deze worden gebruikt om zo snel mogelijk een dialog te maken die niks speciaals heeft. Continuing gaat door naar een volgende dialog en Ending stopt de dialog.
+                Maar BaseDialog is de meest flexibele van de drie, want deze class stelt een developer ertoe in staat om alle mogelijke settings in één
+                base constructor in te vullen.
+                <br><br>
+                Je kan aan elke dialog ook custom code toevoegen die wordt uitgevoerd wanneer het bericht verschijnt, of juist verdwijnt.
+                Dit kan een developer doen door één van de "public virtual void" methods uit BaseDialog te overriden, en in de body van deze 
+                method hun code te schrijven.
+                <br><br>
+                De DialogSound class kan geluiden of muziek afspelen door middel van een aantal instellingen: bestandsnaam, looping(boolean), volume en naam van AudioSource.
+                DialogSound maakt gebruikt van een Unity AudioSource om een geluidsclip af te spelen in de scene, terwijl de dialog bezig is.
+                <br><br>
+            </p>
+            
+
+            <h2><br><br><br>Rich text & custom effects</h2>
 
             <p class="project-description">
                 <br>
@@ -59,18 +104,69 @@
             </p>
 
             <p class="project-description">
-                Deze custom tekst effecten werden samen gevoegd in één C# enum.
+                Deze custom tekst effecten werden samen gevoegd in één C# enum.<br><br>
             </p>
 
+            <img src="img/dialogtexteffects.png" alt="Plaatje van Dialog System" class="project-image" style="width: 250px;">
+
+            <p class="project-description">
+                <br>Deze enum die DialogTextEffects heet, 
+                kan gebruikt worden bij het aanmaken van een nieuwe dialog om één of meer effecten toe te voegen.
+                Niet alle effecten werken met elkaar vanwege de manier waarop ze achter de schermen geimplementeerd zijn, 
+                veel wel.
+                <br><br>
+                Hieronder zie je een voorbeeld van een dialog waar een regenboog effect wordt gebruikt. 
+                Het regenboog effect is een van de weinige effecten waar ook een "target" string aan toegevoegd kan worden.
+                In dit geval is dat "space dust".<br><br>
+            </p>
             
+            <img src="img/dialogtexteffectuse.png" alt="Plaatje van Dialog System" class="project-image" style="width: 600px;">
+            
+            <p class="project-description">
+                <br>Het resultaat van deze instellingen is een zin  met enkele regenboogkleurige woorden. Hier is een voorbeeld van een dialog uit het spel:<br><br>
+            </p>
+
+            <img src="img/Rainbow.gif" alt="Plaatje van Dialog System" class="project-image" style="width: 400px;"> 
+
+            <p class="project-description">
+                <br>De implementatie van de verschillende effecten bevinden zich in de DialogSystemUI class. 
+                In de CreateDialogElement method wordt door middel van een foreach loop en een switch case bepaald welke effecten worden toegepast.<br><br>
+            </p>
+
+            <img src="img/switcheffect.png" alt="Plaatje van Dialog System" class="project-image" style="width: 700px;"> 
+
+            <p class="project-description">
+                <br>Alle effecten behalve de tekstgroottes worden toegepast door middel can Unity Coroutines die elke frame een IEnumerator functie aanroepen.
+                Deze functies nemen de Label (het tekstvak) en voeren het effect met een aantal parameters er op uit.<br><br>
+            </p>
+
+            <img src="img/shakeeffect.png" alt="Plaatje van Dialog System" class="project-image" style="width: 600px;"> 
+
+            <p class="project-description">
+                <br>In dit geval wordt de positie (offset) van het tekstvak berekent door middel van willekeurige getallen,
+                waardoor de speler de illusie krijgt dat de tekst schudt.
+                Hieronder is het effect te zien dat de bovenstaande ShakeEffect method produceert.<br><br>
+            </p>
 
             <img src="img/Shaking.gif" alt="Plaatje van Dialog System" class="project-image" style="width: 400px;">
             
-            <img src="img/Rainbow.gif" alt="Plaatje van Dialog System" class="project-image" style="width: 400px;">            
+            <h2><br><br><br>Soepel afwisselen van berichten</h2>
 
-            <h2>Soepel afwisselen van berichten</h2>
+            <p class="project-description">
+                <br>
+                Het soepel afwisselen van berichten gaat door middel van een stukje code in de DialogSystemController dat een cooldown periode tussen
+                twee berichten toevoegd, en een UI Toolkit animatie die de doorzichtigheid van een dialog een soepele overgang
+                geeft.
+                <br><br>
+            </p>
 
-    
+            <img src="img/transition.png" alt="Plaatje van Dialog System" class="project-image" style="width: 400px;">
+
+            <p class="project-description">
+                <br>
+                Dit is het einde van deze developer blog. Dankjewel voor het lezen!
+                <br><br>
+            </p>
 
         </section>
 
