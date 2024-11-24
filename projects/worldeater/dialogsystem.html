@@ -18,11 +18,11 @@
     <script src="../../js/main.js" defer></script>
 
     <!-- Main content -->
-    <main class="main" id="main" style="background-color: #85bbed;">
+    <main class="main" id="main" style="background-color: #98c5ee;">
 
         <!-- Project title -->
         <section class="project-title-section">
-            <h1 class="project-title">World Eater<span style="font-weight: normal;"> - Dialog system developer blog</span> </h1>
+            <h1 class="project-title">World Eater<span style="font-weight: normal;"> - Dialog system</span> </h1>
         </section>
 
         <!-- Description -->
@@ -37,6 +37,7 @@
                 ontworpen, geprogrammeerd en hoe het er uiteindelijk uit ziet.
                 <br><br>
                 Een aantal features van dit dialog systeem: Branching dialogs, callbacks voor custom code, afbeeldingen, geluiden en teksteffecten.
+                In deze blog beschrijf ik vooral de belangrijkste features op een korte manier, en probeer ik niet al te veel in technisch detail te gaan.
                 <br><br>
             </p>
 
@@ -54,6 +55,22 @@
             </p>
 
             <img src="img/dialogsystem1.png" alt="Plaatje van Dialog System" class="project-image" style="width: 600px;">
+
+            <h2><br><br><br>Branching</h2>
+
+            <p class="project-description">
+                <br>
+                Het is fijn om branches (aftakkingen) te hebben in je dialog. Door deze feature toe te voegen kan je ineens van alles maken.
+                Denk aan een winkel waar je power-ups kan kopen, een level selector of een game over menu.
+                <br><br>
+                In de dialog system die ik heb gemaakt voor World Eater werkt dit via een class die ik DialogOption heb genoemd. Er zijn verschillende soorten helper classes zoals SimpleEndDialogOption en SimpleRedirectDialogOption. 
+                Deze classes vullen wat instellingen voor een DialogOption alvast voor je in, zodat je wat typwerk bespaart. Ook kunnen alle dialog options custom code toevoegen via DialogOption.Activate().
+                <br><br>
+                Hier is een voorbeeld van branching met twee aftakkingen: Deze dialog heeft één keuze die overschakelt naar de volgende dialog en één keuze die het gesprek beëindigt.
+                <br><br>
+            </p>
+
+            <img src="img/branching.png" alt="Plaatje van Dialog System" class="project-image" style="width: 700px;">
 
             <h2><br><br><br>Developer experience</h2>
 
