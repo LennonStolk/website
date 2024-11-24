@@ -32,12 +32,12 @@
 
             <p class="project-description">
                 <br>
-                Welkom bij mijn developer blog die gaat over de dialog system feature die ik heb gebouwd
-                voor de game "World Eater". In deze developer blog ga ik laten zien hoe ik dit systeem heb
-                ontworpen, geprogrammeerd en hoe het er uiteindelijk uit ziet.
+                In World Eater speelt interactie met de speler een belangrijke rol. Om deze interactie naar een hoger niveau te tillen, 
+                heb ik een flexibel en schaalbaar dialog system ontwikkeld. Dit systeem biedt ondersteuning voor branching dialogs, 
+                callbacks voor custom code, afbeeldingen, geluiden en dynamische teksteffecten.
                 <br><br>
-                Een aantal features van dit dialog systeem: Branching dialogs, callbacks voor custom code, afbeeldingen, geluiden en teksteffecten.
-                In deze blog beschrijf ik vooral de belangrijkste features op een korte manier, en probeer ik niet al te veel in technisch detail te gaan.
+                In deze blog deel ik mijn aanpak en de belangrijkste features van dit systeem. 
+                Mijn focus lag op het ontwerpen van een oplossing die gebruiksvriendelijk is voor developers.
                 <br><br>
             </p>
 
@@ -45,12 +45,12 @@
 
             <p class="project-description">
                 <br>
-                Ik heb het simpel gehouden qua ontwerp. Donkere doorzichtige afgeronde rechthoeken met een grijze rand als achtergrond.
-                En dan lichtere blauwe of witte tekst voor contrast en omdat het past bij het ruimte thema van het spel. Plaatje aan de linkerkant, de rest aan de rechterkant. En knoppen of "click to continue" tekst rechtsonder,
-                afhankelijk van of de dialog meerdere opties heeft. De knoppen worden groter als de muis er overheen zit om duidelijk te maken dat je er op kan klikken.
+                Het ontwerp van het dialog system is simpel en consistent gehouden, met een focus op leesbaarheid en een futuristische uitstraling die past bij het ruimtethema van de game:
                 <br><br>
-                Hieronder zie je een voorbeeld van een dialoog met meerdere opties en een placeholder als plaatje. 
-                Je kan zien dat de style van de dialog system consequent is met de style van de notification system.
+                    UI Design: Donkere doorzichtige achtergronden met afgeronde hoeken en contrasterende lichte tekst. Een afbeelding aan de linkerkant, tekst aan de rechterkant en interactieopties rechtsonder.
+                    Interactie: Opties vergroten wanneer de muis erover beweegt om interactie intuïtief te maken.
+                <br><br>
+                Deze visuele keuzes zorgen niet alleen voor een prettige gebruikerservaring, maar maken het ook eenvoudig om notificaties en dialogen visueel op elkaar af te stemmen.
                 <br><br>
             </p>
 
@@ -60,13 +60,14 @@
 
             <p class="project-description">
                 <br>
-                Het is fijn om branches (aftakkingen) te hebben in je dialog. Door deze feature toe te voegen kan je ineens van alles maken.
-                Denk aan een winkel waar je power-ups kan kopen, een level selector of een game over menu.
+                Een van de kernfeatures is de ondersteuning voor branching dialogs. Hiermee kunnen spelers keuzes maken die invloed hebben op het verloop van het spel. Denk aan scenario's zoals een winkel waarin spelers power-ups kopen, een levelselector of een game-over-menu.
                 <br><br>
-                In de dialog system die ik heb gemaakt voor World Eater werkt dit via een class die ik DialogOption heb genoemd. Er zijn verschillende soorten helper classes zoals SimpleEndDialogOption en SimpleRedirectDialogOption. 
-                Deze classes vullen wat instellingen voor een DialogOption alvast voor je in, zodat je wat typwerk bespaart. Ook kunnen alle dialog options custom code toevoegen via DialogOption.Activate().
+                De branching werkt via een class genaamd DialogOption, waarin verschillende helper classes zoals SimpleEndDialogOption en SimpleRedirectDialogOption standaardinstellingen bieden. Dit bespaart tijd en minimaliseert foutgevoeligheid. Dankzij deze structuur kunnen developers met minimale code complexe aftakkingen bouwen.
                 <br><br>
-                Hier is een voorbeeld van branching met twee aftakkingen: Deze dialog heeft één keuze die overschakelt naar de volgende dialog en één keuze die het gesprek beëindigt.
+                Voorbeeld: Een dialoog waarin een speler kan kiezen:
+                <br><br>
+                    Doorgaan naar een nieuwe conversatie.
+                    Of stoppen, waarmee de dialoog beëindigd wordt.
                 <br><br>
             </p>
 
@@ -76,10 +77,19 @@
 
             <p class="project-description">
                 <br>
-                Als je de code voor elke dialog moet vanaf nul moet schrijven, dan ben je heel lang bezig om een mooi gesprek te maken in je game.
-                Daarom heb ik me ook gefocust op DX (Developer eXperience). Hiervoor heb ik classes voor dialogs, dialog geluiden, dialog afbeeldingen en dialog opties gemaakt die het leven makkelijker maken voor developers.
+                Een gebruiksvriendelijke developer experience (DX) stond centraal tijdens de ontwikkeling van het dialog system. Om dit te bereiken, heb ik een reeks helper classes en een duidelijke structuur opgezet:
                 <br><br>
-                Hieronder een voorbeeld van een van die helper classes.
+                <span style="font-weight: bold;">Classes voor snelle implementatie:</span>
+                    BaseDialog: De meest flexibele klasse, geschikt voor complexe dialogen.
+                    SimpleContinuingDialog en SimpleEndingDialog: Minimalistische classes voor standaarddialogen.
+                <br><br>
+                <span style="font-weight: bold;">Custom code support:</span>
+                    Door virtual methods in BaseDialog te overriden, kunnen developers eenvoudig unieke functies toevoegen bij het starten of beëindigen van een dialoog.
+                <br><br>
+                <span style="font-weight: bold;">DialogSound Class:</span>
+                    Geluid en muziek worden toegevoegd via Unity’s AudioSource, met parameters zoals volume, looping en bestandsnaam. Hierdoor kan elke dialoog worden verrijkt met audiofeedback.
+                <br><br>
+                De impact hiervan: Met deze structuur kunnen developers snel en efficiënt dialogen bouwen zonder zich bezig te houden met technische details, wat iteraties versnelt en de productiviteit van teams verhoogt.
                 <br><br>
             </p>
 
@@ -87,17 +97,7 @@
 
             <p class="project-description">
                 <br>
-                De belangrijkste class is BaseDialog. Hier stammen nog twee classes van af, namelijk SimpleContinuingDialog en SimpleEndingDialog.
-                Deze worden gebruikt om zo snel mogelijk een dialog te maken die niks speciaals heeft. Continuing gaat door naar een volgende dialog en Ending stopt de dialog.
-                Maar BaseDialog is de meest flexibele van de drie, want deze class stelt een developer ertoe in staat om alle mogelijke settings in één
-                base constructor in te vullen.
-                <br><br>
-                Je kan aan elke dialog ook custom code toevoegen die wordt uitgevoerd wanneer het bericht verschijnt, of juist verdwijnt.
-                Dit kan een developer doen door één van de "public virtual void" methods uit BaseDialog te overriden, en in de body van deze 
-                method hun code te schrijven.
-                <br><br>
-                De DialogSound class kan geluiden of muziek afspelen door middel van een aantal instellingen: bestandsnaam, looping(boolean), volume en naam van AudioSource.
-                DialogSound maakt gebruikt van een Unity AudioSource om een geluidsclip af te spelen in de scene, terwijl de dialog bezig is.
+                Hier zie je de BaseDialog class die gebruikt wordt voor alle dialogs.
                 <br><br>
             </p>
             
@@ -171,9 +171,9 @@
 
             <p class="project-description">
                 <br>
-                Het soepel afwisselen van berichten gaat door middel van een stukje code in de DialogSystemController dat een cooldown periode tussen
-                twee berichten toevoegd, en een UI Toolkit animatie die de doorzichtigheid van een dialog een soepele overgang
-                geeft.
+                Om berichten soepel over te laten gaan, heb ik een fade-out en fade-in animatie toegevoegd via Unity’s UI Toolkit. Dit creëert een vloeiende overgang en geeft een visuele indicatie van het einde van een bericht, wat de immersie van de speler versterkt.
+                <br><br>
+                Technische uitdaging: Het balanceren van animaties en interactie zonder vertragingen voor de speler. Dit heb ik opgelost door een cooldownmechanisme te implementeren dat parallel draait aan de animaties.
                 <br><br>
             </p>
 
