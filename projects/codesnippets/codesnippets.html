@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lennon Stolk's Portfolio Website</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+
+<body>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/1f716bedd7.js" crossorigin="anonymous"></script>
+    <script src="../../js/main.js" defer></script>
+
+    <!-- Main content -->
+    <main class="main" id="main">
+
+        <!-- Project title -->
+        <section class="project-title-section">
+            <h1 class="project-title">Lennon Stolk<span style="font-weight: normal;"> - Code Snippets</span> </h1>
+        </section>
+
+        <!-- Description -->
+        <section class="project-description-section">
+
+            <h2><br><br><br>Deflect bullets</h2>
+
+            <p class="project-description">
+                <br>
+                Deze methode DeflectBullets zorgt ervoor dat vijandelijke kogels worden afgebogen wanneer een schild actief is. 
+                Het controleert de afstand tussen de kogels en het schild. Als een kogel binnen de straal van het schild komt, 
+                wordt de richting aangepast aan de normale vector van het raakpunt. 
+                De snelheid en het type van de kogel worden daarna gewijzigd. Dit is geschreven in C# en gebruikt voor een Bullet Hell game.
+                <br><br>
+            </p>
+
+            <img src="img/DeflectBullets.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+            <h2><br><br><br>Parallax effect background</h2>
+
+            <p class="project-description">
+                <br>
+                De methode UpdateCameraPosition past de positie van meerdere achtergronden aan op basis van de camerabeweging. 
+                De achtergrondlagen bewegen met verschillende snelheden, afhankelijk van hun diepte, om een parallax-effect te creëren. 
+                De marges worden berekend met de afbeeldingsgrootte en de schermgrootte, zodat de achtergronden correct worden uitgelijnd. 
+                Geschreven in C# en bedoeld voor een 2D-gameomgeving.
+                <br><br>
+            </p>
+
+            <img src="img/Parallax.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+            <h2><br><br><br>Shader loader</h2>
+
+            <p class="project-description">
+                <br>
+                De klasse PlanetShader beheert een shader die gebruikt wordt voor het renderen van planeten in een 2D-game. Het maakt gebruik van aanpasbare shaderinstellingen en ondersteunt camera-interactie. Hier is een korte uitleg:
+                <br><br>
+                <span style="font-weight: bold;">Shaderconfiguratie</span> Bij het aanmaken van een PlanetShader wordt een specifieke shader geladen, en de instellingen (zoals floats, integers en vectoren) worden toegepast via een instellingenbeheerder.<br>
+                <span style="font-weight: bold;">Schalen en resolutie:</span> De schaal en schermresolutie worden ingesteld zodat de shader correct weergegeven wordt, afhankelijk van de viewport.<br>
+                <span style="font-weight: bold;">Rendering:</span> Tijdens het tekenen wordt een SpriteBatch gestart met de shader als effect. Indien nodig worden dynamische parameters, zoals tijd en camera-instellingen, aangepast.<br>
+                <span style="font-weight: bold;">Camera-interactie:</span> De positie van de camera wordt verwerkt om het effect van beweging op de planeetweergave te simuleren.<br>
+                <span style="font-weight: bold;">Technologie:</span> C#, MonoGame, en shaders (HLSL).
+                <br><br>
+            </p>
+
+            <img src="img/PlanetShaderLoader.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+            <h2><br><br><br>Wavy text effect</h2>
+
+            <p class="project-description">
+                <br>
+                De methode WavyTextEffect past een golvend effect toe op de tekst van een label door de verticale positie van elk karakter te verplaatsen op basis van een sinusgolf. 
+                Het effect maakt gebruik van de tijd (Time.time), frequentie en amplitude om de beweging te berekenen. 
+                Elke iteratie van de coroutine past de offset van de karakters aan en update de tekst van het label. 
+                Het resultaat is een doorlopende animatie van de tekst, wat vaak gebruikt wordt voor visuele effecten in bijvoorbeeld gebruikersinterfaces. 
+                De code is geschreven in C# en gebruikt in Unity.
+                <br><br>
+            </p>
+
+            <img src="img/WavyText.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+            <h2><br><br><br>Dialog system</h2>
+
+            <p class="project-description">
+                <br>
+                In de CallDialog-klasse laat ik zien hoe ik een flexibele en herbruikbare dialoogstructuur heb opgebouwd door 
+                verschillende ondersteunende klassen te schrijven. Al het noodzakelijke, zoals dialoogopties, visuele effecten 
+                en geluidseffecten, wordt mogelijk gemaakt door de klassen die ik zelf heb ontwikkeld. Door deze klassen te creëren, 
+                heb ik een systeem opgebouwd waarin ik de dialooglogica en -opties eenvoudig kan definiëren en uitbreiden, 
+                zonder me bezig te hoeven houden met herhalende code of ingewikkelde implementatiedetails.
+                <br><br>
+                Met de BaseDialog-klasse kan ik snel nieuwe dialoogvensters opzetten door simpelweg de juiste parameters in te vullen. 
+                Dit zorgt voor een efficiëntere ontwikkelingservaring, omdat ik de complexiteit van de onderliggende logica heb 
+                abstract gemaakt. Ik kan nieuwe dialoogscenario's creëren door alleen tekst, keuzes, effecten en geluiden te definiëren, 
+                terwijl de infrastructuur die ik heb gebouwd de rest van de dialoogafhandeling automatisch regelt.
+                <br><br>
+            </p>
+
+            <img src="img/CallDialog.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+            <h2><br><br><br>Log in</h2>
+
+            <p class="project-description">
+                <br>
+                De LogIn functie in de AuthService struct wordt gebruikt om een gebruiker in te loggen. 
+                Het accepteert de email en password, haalt de gebruikersgegevens op, en vergelijkt 
+                het wachtwoord met de opgeslagen hash via bcrypt. Als de wachtwoorden overeenkomen, 
+                wordt een JWT-token gegenereerd met de gebruikers-ID als claim en ondertekend met een geheime sleutel. 
+                Dit token wordt vervolgens in een HTTP-only cookie opgeslagen voor beveiligde toegang. 
+                De functie retourneert het token of een fout bij een mislukking. 
+                De technologieën die gebruikt worden zijn Go, Fiber, bcrypt, en JWT.
+                <br><br>
+            </p>
+
+            <img src="img/LogIn.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+            <h2><br><br><br>Add playlist entry</h2>
+
+            <p class="project-description">
+                <br>
+                De functie addPlaylistEntry voegt een nummer toe aan een afspeellijst in de database en retourneert de 
+                details van het toegevoegde nummer. Eerst wordt de gebruikers-ID opgehaald op basis van de gebruikersnaam 
+                door de functie getIdFromUserName aan te roepen. Vervolgens wordt er een nieuwe invoer toegevoegd aan de tabel 
+                fspot_playlist_entries met de playlistId, userId, en songId. Daarna wordt een tweede SQL-query uitgevoerd 
+                om de gegevens van het net toegevoegde nummer op te halen, inclusief de naam, artiest, album en de bron van het nummer. 
+                Ten slotte wordt het resultaat als een JSON-gecodeerd object teruggestuurd naar de client.
+                <br><br>
+                De technologieën die in deze functie worden gebruikt zijn PHP voor de server-side scripting, 
+                SQL voor de database-interacties via PDO, en JSON om gestructureerde gegevens naar de client te sturen. 
+                De functie maakt het mogelijk om eenvoudig een nummer toe te voegen aan een afspeellijst en de details 
+                van dat nummer op te halen en terug te sturen.
+                <br><br>
+            </p>
+
+            <img src="img/AddPlaylist.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+            <h2><br><br><br>Tab switcher</h2>
+
+            <p class="project-description">
+                <br>
+                De EditorMenuNavigation-component, geschreven in React, toont een navigatiemenu voor het bewerken van een avatar. 
+                Het maakt gebruik van React hooks, zoals useState, om de geselecteerde tab op te slaan. Elke tab heeft een knop die, 
+                wanneer geselecteerd, de naam van de tab doorgeeft aan de oudercomponent via de passSelectedTab-prop. 
+                De geselecteerde tab bepaalt welke knop visueel geselecteerd is. Als een afbeelding is opgegeven, 
+                wordt deze naast de naam van de tab weergegeven. Bij het klikken wordt de geselecteerde tab bijgewerkt 
+                en doorgestuurd naar de oudercomponent. De stijlen worden toegepast via een aparte CSS-bestand (editor-menu-navigation.css).
+                <br><br>
+            </p>
+
+            <img src="img/TabSwitcher.png" alt="Plaatje van Dialog System" style="width: 800px;">
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
