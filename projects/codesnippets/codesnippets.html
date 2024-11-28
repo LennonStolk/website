@@ -32,7 +32,7 @@
 
             <p class="project-description">
                 <br>
-                Deze GLSL-shader, mainImage, maakt een vloeiend en dynamisch patroon dat constant in beweging is dankzij de tijdsvariabele (iTime). Het gebruikt coördinaten om afstanden en hoeken te berekenen en voegt golvende vervormingen toe om een wervelend effect te krijgen. 
+                Deze GLSL-shader, die ik "Neon flower shader" heb genoemd, maakt een patroon dat constant in beweging is dankzij de tijdsvariabele (iTime). Het gebruikt coördinaten om afstanden en hoeken te berekenen en voegt golvende vervormingen toe om een wervelend effect te krijgen. 
                 De kleuren passen zich aan de beweging aan, wat een smooth blauw-wit patroon oplevert dat continu verandert.
                 <br><br>
                 Je kunt de shader bekijken op <a href="https://www.shadertoy.com/view/cl2yDd">ShaderToy</a>. 
@@ -48,18 +48,18 @@
                 <br>
                 Deze code is een implementatie van het Wave Function Collapse (WFC)-algoritme, 
                 dat vaak wordt gebruikt voor procedurële generatie van patronen of kaarten. Het werkt door een 
-                raster van tegels te vullen op basis van vooraf gedefinieerde regels. Elke tegel begint met 
-                meerdere mogelijke opties, en deze worden tijdens het proces gereduceerd totdat elke tegel een enkele optie heeft. 
+                raster van tiles te vullen op basis van vooraf gedefinieerde regels. Elke tile begint met 
+                meerdere mogelijke opties, en deze worden tijdens het proces gereduceerd totdat elke tile een enkele optie heeft. 
                 Dit gebeurt door telkens de tegel met de minste mogelijkheden te kiezen, een definitieve waarde toe te wijzen, 
-                en vervolgens de opties van naburige tegels te beperken op basis van de gekozen waarde. 
+                en vervolgens de opties van naburige tiles te beperken op basis van de gekozen waarde. 
                 Dit proces herhaalt zich totdat het raster volledig is ingevuld.
                 <br><br>
                 Ik heb deze code zelf geschreven zonder een tutorial te volgen, dus de implementatie 
-                kan afwijken van hoe anderen het aanpakken. Dat gezegd hebbende, de belangrijkste stappen zoals 
-                het kiezen van tegels met de laagste entropie, het verspreidingsproces naar aanliggende tegels en het 
-                willekeurig selecteren van opties, vormen de kern van het WFC-algoritme. Het hele proces is uitgevoerd in JavaScript, 
-                waarbij gebruik wordt gemaakt van recursie en randomisatie om de algoritmische stappen te volgen. 
-                Het resultaat is een persoonlijke interpretatie van dit algoritme.
+                kan afwijken van hoe anderen het aanpakken. Mijn versie van het Wave Function Collapse 
+                algoritme is overigens een <a href="/projects/wfc/index.html">webpagina</a> gemaakt met JavaScript 
+                die een kaart voor een pixel art game genereert. Wanneer je op de knop met het pijltje klikt wordt er
+                een nieuwe kaart gegenereerd. Er zijn overigens ook wat missende vakjes omdat de input tileset niet in alle gevallen een
+                passende tile bevat.
                 <br><br>
             </p>
 
@@ -109,7 +109,7 @@
                 Deze methode DeflectBullets zorgt ervoor dat vijandelijke kogels worden afgebogen wanneer een schild actief is. 
                 Het controleert de afstand tussen de kogels en het schild. Als een kogel binnen de straal van het schild komt, 
                 wordt de richting aangepast aan de normale vector van het raakpunt. 
-                De snelheid en het type van de kogel worden daarna gewijzigd. Dit is geschreven in C# en gebruikt voor een Bullet Hell game.
+                De snelheid en het type van de kogel worden daarna gewijzigd. Dit is geschreven in C# en gebruikt voor <a href="/projects/solarhell.html">Solar Hell</a>. 
                 <br><br>
             </p>
 
@@ -119,7 +119,8 @@
 
             <p class="project-description">
                 <br>
-                De klasse PlanetShader beheert een shader die gebruikt wordt voor het renderen van planeten in een 2D-game. Het maakt gebruik van aanpasbare shaderinstellingen en ondersteunt camera-interactie. Hier is een korte uitleg:
+                De klasse PlanetShader beheert een shader die gebruikt wordt voor het renderen van planeten in <a href="/projects/solarhell.html">Solar Hell</a>. 
+                Het maakt gebruik van aanpasbare shaderinstellingen en ondersteunt camera-interactie. Hier is een korte uitleg:
                 <br><br>
                 <span style="font-weight: bold;">Shaderconfiguratie</span> Bij het aanmaken van een PlanetShader wordt een specifieke shader geladen, en de instellingen (zoals floats, integers en vectoren) worden toegepast via een instellingenbeheerder.<br>
                 <span style="font-weight: bold;">Schalen en resolutie:</span> De schaal en schermresolutie worden ingesteld zodat de shader correct weergegeven wordt, afhankelijk van de viewport.<br>
@@ -138,7 +139,7 @@
                 De methode UpdateCameraPosition past de positie van meerdere achtergronden aan op basis van de camerabeweging. 
                 De achtergrondlagen bewegen met verschillende snelheden, afhankelijk van hun diepte, om een parallax-effect te creëren. 
                 De marges worden berekend met de afbeeldingsgrootte en de schermgrootte, zodat de achtergronden correct worden uitgelijnd. 
-                Geschreven in C# en bedoeld voor een 2D-gameomgeving.
+                Geschreven in C# en bedoeld voor een 2D-gameomgeving. Deze code is gebruikt om de achtergrond een dynamisch gevoel te geven in <a href="/projects/solarhell.html">Solar Hell</a>. 
                 <br><br>
             </p>
 
@@ -152,7 +153,7 @@
                 Het effect maakt gebruik van de tijd (Time.time), frequentie en amplitude om de beweging te berekenen. 
                 Elke iteratie van de coroutine past de offset van de karakters aan en update de tekst van het label. 
                 Het resultaat is een doorlopende animatie van de tekst, wat vaak gebruikt wordt voor visuele effecten in bijvoorbeeld gebruikersinterfaces. 
-                De code is geschreven in C# en gebruikt in Unity.
+                De code is geschreven in C# en gebruikt in Unity voor <a href="/projects/worldeater.html">World Eater</a>.
                 <br><br>
             </p>
 
@@ -171,7 +172,8 @@
                 Met de BaseDialog-klasse kan ik snel nieuwe dialoogvensters opzetten door simpelweg de juiste parameters in te vullen. 
                 Dit zorgt voor een efficiëntere ontwikkelingservaring, omdat ik de complexiteit van de onderliggende logica heb 
                 abstract gemaakt. Ik kan nieuwe dialoogscenario's creëren door alleen tekst, keuzes, effecten en geluiden te definiëren, 
-                terwijl de infrastructuur die ik heb gebouwd de rest van de dialoogafhandeling automatisch regelt.
+                terwijl de infrastructuur die ik heb gebouwd de rest van de dialoogafhandeling automatisch regelt. 
+                Deze code is geschreven in C# en gemaakt voor <a href="/projects/worldeater.html">World Eater</a>.
                 <br><br>
             </p>
 

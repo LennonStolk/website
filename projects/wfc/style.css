@@ -1,0 +1,107 @@
+/* Main layout */
+body {
+    margin: 0;
+    background-color: rgb(90, 98, 141);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    color: rgb(220, 220, 248);
+}
+#grid-container {
+    flex: 1;
+}
+#console {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+#tile-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+@media only screen and (max-width: 600px) {
+    main {
+        flex-wrap: wrap;
+    }
+    #grid-container {
+        width: 100%;
+        flex: none;
+    }
+    #console {
+        flex: 1;
+    }
+}
+
+
+/* Grid */
+#grid {
+    max-height: 100%;
+    background-color: rgb(46, 46, 46);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+}
+.grid-tile {
+    width: 5%;
+    height: 5%;
+    image-rendering: optimizeSpeed;
+}
+
+/* Console */
+#commands-portion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(76, 83, 116);
+    overflow-y: auto;
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+#input-portion {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+#input {
+    flex: 1;
+    resize: none;
+    width: 10px;
+    font-size: 16px;
+    background-color: rgb(143, 152, 190);
+    margin: 10px 10px 10px 0;
+    border: none;
+}
+#submit {
+    width: 55px;
+    background-color: rgb(143, 152, 190);
+    margin: 10px 0;
+    border: none;
+}
+#submit:hover {
+    filter: brightness(1.1);
+}
+
+
+/* Tile list */
+.tile-list-item {
+    display: flex;
+    flex-direction: row;
+    padding: 6px 0 0 6px;
+}
+.tile-img {
+    width: 32px;
+    height: 32px;
+    image-rendering: optimizeSpeed;
+}
+.tile-list-name {
+    margin: auto 5px;
+    padding: 0;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 16px;
+}
