@@ -93,11 +93,23 @@ function render_display_grid()
 function wave_function_collapse()
 {   
     grid_tiles = get_default_grid(grid_dimensions.width, grid_dimensions.height);
-    while (grid_tiles.flat(1).some(tile => tile.options.length > 1))
-    {
+
+    /* INSTANT */
+    // while (grid_tiles.flat(1).some(tile => tile.options.length > 1))
+    // {
+    //     wave_function_collapse_cycle();
+    // }
+    // render_display_grid();
+
+    /* ANIMATED */
+    var interval = setInterval(() => {
         wave_function_collapse_cycle();
-    }
-    render_display_grid();
+        render_display_grid();
+
+        if (!(grid_tiles.flat(1).some(tile => tile.options.length > 1))) {
+            clearInterval(interval);
+        }
+    }, 1);
 }
 
 
