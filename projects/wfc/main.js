@@ -340,47 +340,47 @@ south of tree-bottom can be grass or red-flowers or yellow-flowers or grass-rock
 east of tree-bottom can be grass or red-flowers or yellow-flowers or grass-rock or water-top-left or water-left or water-bottom-left or tree-top or tree-bottom
 west of tree-bottom can be grass or red-flowers or yellow-flowers or grass-rock or water-top-right or water-right or water-bottom-right
 
-next to water can be water or water-rock or grass
+next to water can be water or water-rock
 north of water can be water-top or water-top-left or water-top-right
 south of water can be water-bottom or water-bottom-right or water-bottom-left
 east of water can be water-top-right or water-right or water-bottom-right
 west of water can be water-top-left or water-left or water-bottom-left
 
-next to water-rock can be water or water-rock or grass
+next to water-rock can be water or water-rock
 north of water-rock can be water-top or water-top-left or water-top-right
 south of water-rock can be water-bottom or water-bottom-right or water-bottom-left
 east of water-rock can be water-top-right or water-right or water-bottom-right
 west of water-rock can be water-top-left or water-left or water-bottom-left
 
-north of water-top-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom
+north of water-top-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or water-bottom-left
 south of water-top-left can be water-left or water or water-rock
 east of water-top-left can be water-top or water or water-rock
-west of water-top-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top
+west of water-top-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top or water-top-right
 
-north of water-top can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom
-south of water-top can be water or water-rock or water-bottom
+north of water-top can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or water-bottom
+south of water-top can be water or water-rock
 east of water-top can be can be water-top or water-top-right or water or water-rock
 west of water-top can be can be water-top or water-top-left or water or water-rock
 
-north of water-top-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom
+north of water-top-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or water-bottom-right
 south of water-top-right can be water-right or water or water-rock
-east of water-top-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top
+east of water-top-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top or water-top-left
 west of water-top-right can be water-top or water or water-rock
 
 north of water-left can be water-top-left or water-left or water or water-rock
 south of water-left can be water-bottom-left or water-left or water or water-rock
 east of water-left can be water or water-rock or water-right
-west of water-left can be red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top
+west of water-left can be red-flowers or yellow-flowers or grass-rock or grass or tree-bottom or tree-top
 
 north of water-right can be water-top-right or water-right or water or water-rock
 south of water-right can be water-bottom-right or water-right or water or water-rock
-east of water-right can be red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top
-west of water-right can be can be water or water-rock or water-left
+east of water-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top
+west of water-right can be can be water or water-rock
 
 north of water-bottom-left can be water-left or water or water-rock
-south of water-bottom-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-top
+south of water-bottom-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-top or water-top-left
 east of water-bottom-left can be water-bottom or water or water-rock
-west of water-bottom-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top
+west of water-bottom-left can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top or water-bottom-right
 
 north of water-bottom can be water or water-rock or water-top
 south of water-bottom can be grass or red-flowers or yellow-flowers or grass-rock or tree-top
@@ -388,6 +388,6 @@ east of water-bottom can be water-bottom or water-bottom-right or water or water
 west of water-bottom can be water-bottom or water-bottom-left or water or water-rock
 
 north of water-bottom-right can be water-right or water or water-rock
-south of water-bottom-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-top
-east of water-bottom-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top
+south of water-bottom-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-top or water-top-right
+east of water-bottom-right can be grass or red-flowers or yellow-flowers or grass-rock or tree-bottom or tree-top or water-bottom-left
 west of water-bottom-right can be water-bottom or water or water-rock`
