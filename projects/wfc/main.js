@@ -75,12 +75,32 @@ function render_display_grid()
 {
     ELEMENT_GRID.innerHTML = "";
 
-    grid_tiles.forEach(column => 
+    grid_tiles.forEach((column, x) => 
     {
-        column.forEach(tile => 
+        column.forEach((tile, y) => 
         {
             let img = document.createElement("img");
-            img.src = (tile.options.length > 0) ? "tiles/" + TILES[tile.options[0]].src : "tiles/empty.png";
+            
+
+            if (tile.options.length == 0)
+            {
+                var tileBeneath = grid_tiles[tile.x][tile.y + 1];
+                var waterTiles = [5, 6, 7, 9, 10, 11, 15];
+
+                if (tileBeneath != undefined && tileBeneath.options[0] == 8) {
+                    img.src = "tiles/tile017.png";
+                }
+                else if (tileBeneath != undefined && waterTiles.includes(tileBeneath.options[0])) {
+                    img.src = "tiles/tile018.png";
+                }
+                else {
+                    img.src = "tiles/tile016.png";
+                }
+            }
+            else
+            {
+                img.src = "tiles/" + TILES[tile.options[0]].src;
+            }
             img.style.width = 100 / grid_dimensions.width + "%";
             img.style.height = 100 / grid_dimensions.height + "%";
             img.style.imageRendering = "optimizeSpeed";
