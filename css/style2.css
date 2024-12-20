@@ -1,0 +1,87 @@
+.body {
+    background-color: black;
+}
+
+.navbar {
+    display: flex; 
+    flex-direction: row;  
+    width: 100vw; 
+    background-color: black;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    padding: 0;
+}
+
+.navbar-option {
+    color: rgb(168, 168, 168);
+    font-size: 22px;
+    padding: 20px;
+    transition: ease-in-out 200ms;
+    text-decoration: none;
+}
+
+.navbar-option:hover {
+    color: white;
+}
+
+.navbar-option-active {
+    border-bottom: 2px solid rgb(212, 212, 212);
+    color: white;
+    background-color: rgb(15, 15, 15);
+    pointer-events: none;
+}
+
+.main {
+    margin: 25px;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.split-part {
+    margin-right: 150px;
+}
+
+.portfolio-grid {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: grid;
+    gap: 15px;
+    grid-auto-columns: 150px;
+    grid-auto-rows: 150px;
+}
+
+.portfolio-item {
+    border: 1px solid rgb(38, 38, 38);
+    transition: ease-in-out 200ms;
+}
+
+.portfolio-item:hover {
+    filter: brightness(0.6);
+    scale: 1.05;
+    border: 1px solid rgb(79, 79, 79);
+}
+
+.portfolio-item-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-title {
+    color: rgb(65, 65, 65);
+    font-size: 24px;
+    border-bottom: 1.5px solid rgb(65, 65, 65);
+    width: fit-content;
+    padding: 2px;
+    padding-bottom: 12px;
+    margin-left: 25px;
+    margin-top: 75px;
+    margin-bottom: 30px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    border-radius: 5px;
+}
