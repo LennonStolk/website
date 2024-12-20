@@ -1,5 +1,6 @@
 .body {
     background-color: black;
+    font-family: "Segoe UI";
 }
 
 .navbar {
@@ -106,9 +107,66 @@
     padding: 2px;
     padding-bottom: 12px;
     margin-left: 25px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 30px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
     border-radius: 5px;
+}
+
+.about-me {
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    max-width: 500px;
+}
+
+.about-me > a {
+    color: rgb(158, 158, 158);
+}
+
+.about-me-image {
+    margin-top: 50px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+}
+
+.about-me-image-description {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    color: rgb(158, 158, 158);
+}
+
+.contact-links {
+    min-width: max-content;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+.contact-link {
+    font-size: 15px;
+    padding: 15px;
+    margin: 5px 0;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+    transition: ease-in-out 200ms;
+    background-color: rgb(27, 27, 27);
+    color: white;
+  }
+
+.contact-link > a {
+    color: rgb(158, 158, 158);
+}
+
+.contact-link > i {
+    margin-right: 10px;
+}
+
+.contact-link:hover {
+    filter: brightness(1.2);
 }
