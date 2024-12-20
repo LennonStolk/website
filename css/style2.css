@@ -60,9 +60,9 @@
 }
 
 .portfolio-item:hover {
-    filter: brightness(0.6);
+    filter: brightness(1.25);
     scale: 1.05;
-    border: 1px solid rgb(79, 79, 79);
+    border: 1px solid rgb(40, 40, 40);
 }
 
 .portfolio-item-image {
