@@ -1,3 +1,7 @@
+:root {
+    --accent: rgb(100, 188, 255);
+}
+
 .body {
     background-color: black;
     font-family: "Segoe UI";
@@ -14,7 +18,7 @@
 }
 
 .navbar-option {
-    color: rgb(168, 168, 168);
+    color: rgb(150, 150, 150);
     font-size: 22px;
     padding: 20px;
     transition: ease-in-out 200ms;
@@ -26,7 +30,7 @@
 }
 
 .navbar-option-active {
-    border-bottom: 2px solid aquamarine;
+    border-bottom: 2px solid var(--accent);
     color: white;
     background-color: rgb(15, 15, 15);
     pointer-events: none;
@@ -119,10 +123,11 @@
     color: rgb(255, 255, 255);
     font-size: 18px;
     max-width: 500px;
+    line-height: 1.15;
 }
 
 .about-me > a {
-    color: aquamarine;
+    color: var(--accent);
 }
 
 .about-me-image {
@@ -160,7 +165,7 @@
   }
 
 .contact-link > a {
-    color: aquamarine;
+    color: grey;
 }
 
 .contact-link > i {
@@ -204,7 +209,7 @@
 .experience-company {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
-    color: aquamarine;
+    color: var(--accent);
     margin-bottom: 0px;
 }
 
